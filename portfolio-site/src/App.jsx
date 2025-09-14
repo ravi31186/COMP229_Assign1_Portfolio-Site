@@ -1,12 +1,12 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import React from "react";
-import Home from "./pages/home/Home";
 import './App.css'
+import Home from "./pages/home/Home";
 import AboutMe from './pages/aboutMe/aboutMe';
 import Services from './pages/services/Services';
 import Contact from './pages/contact/Contact';
-import logo from "./assets/logo.png";
 import Projects from './pages/projects/Projects';
+import logo from "./assets/logo.png";
 
 function App() {
   return (
