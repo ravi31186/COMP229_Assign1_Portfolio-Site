@@ -1,16 +1,25 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import React from "react";
 import './App.css'
-import Home from "./pages/home/Home";
+import Home from './pages/home/Home';
 import AboutMe from './pages/aboutMe/aboutMe';
 import Services from './pages/services/Services';
 import Contact from './pages/contact/Contact';
 import Projects from './pages/projects/Projects';
 import logo from "./assets/logo.png";
 
+/*
+File Name: app.js
+Student Name: Ravindra Patil
+Student ID: 300611610
+Date: 2025-09-14
+
+Description: Handles interactive behavior for the portfolio site.
+*/
 function App() {
   return (
     <>
+      {/* ======= Navigation Bar ======= */}
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,6 +56,7 @@ function App() {
         </div>
       </nav>
 
+      {/* ======= Routes ======= */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-me" element={<AboutMe />} />

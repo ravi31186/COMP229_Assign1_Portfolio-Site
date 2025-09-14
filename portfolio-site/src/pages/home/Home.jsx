@@ -1,5 +1,13 @@
 import './Home.css'
 
+/*
+File Name: home.js
+Student Name: Ravindra Patil
+Student ID: 300611610
+Date: 2025-09-14
+
+Description: Handles displaying home page for the portfolio site.
+*/
 export default function Home() {
 
   return (

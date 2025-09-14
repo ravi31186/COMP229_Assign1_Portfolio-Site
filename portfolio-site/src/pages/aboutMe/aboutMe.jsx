@@ -2,6 +2,14 @@ import './AboutMe.css'
 import profile from "../../assets/profile.jpg";
 import resume from "../../assets/resume.pdf";
 
+/*
+File Name: aboutMe.js
+Student Name: Ravindra Patil
+Student ID: 300611610
+Date: 2025-09-14
+
+Description: Handles displaying about me page for the portfolio site.
+*/
 export default function AboutMe() {
 
     return (
@@ -15,7 +23,6 @@ export default function AboutMe() {
 
                 <a href={resume} class="resume-link" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
             </div>
-
         </div>
         </>
     )
