@@ -1,0 +1,22 @@
+import './AboutMe.css'
+import profile from "../../assets/profile.jpg";
+import resume from "../../assets/resume.pdf";
+
+export default function AboutMe() {
+
+    return (
+        <>
+         <div class="about-container">
+            <div class="centered">
+                <h1>Ravindra Patil</h1>
+
+                <img src={profile} alt="Profile Photo"></img>
+                <p>I am a dedicated web developer passionate about building responsive and user-friendly web applications. I specialize in React and modern JavaScript, focusing on writing clean, maintainable code.</p>
+
+                <a href={resume} class="resume-link" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+            </div>
+
+        </div>
+        </>
+    )
+}

@@ -1,0 +1,17 @@
+.about-container {
+    padding: 50px;
+
+    img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; /* optional, center text inside the box */
+    }
+}
+
