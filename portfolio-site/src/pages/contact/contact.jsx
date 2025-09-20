@@ -1,4 +1,5 @@
 import './Contact.css'
+import { useNavigate } from "react-router-dom";
 
 /*
 File Name: contact.js
@@ -9,6 +10,13 @@ Date: 2025-09-14
 Description: Handles displaying contact page for the portfolio site.
 */
 export default function Contact() {
+
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+      e.preventDefault();
+      navigate("/");
+    };
 
     return (
         <>
@@ -51,7 +59,7 @@ export default function Contact() {
                                 <label for="message">Message</label>
                                 <input placeholder="Enter message" type="text" class="form-control" id="message"></input>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" onClick={handleClick}>Submit</button>
                         </form>
                     </div>
                 </div>
