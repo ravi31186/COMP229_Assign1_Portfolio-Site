@@ -1,31 +1,40 @@
-import { Routes, Route, Link } from 'react-router-dom';
 import React from "react";
-import './App.css'
-import Home from './pages/Home/Home';
-import AboutMe from './pages/AboutMe/AboutMe';
-import Services from './pages/Services/Services';
-import Contact from './pages/Contact/Contact';
-import Projects from './pages/Projects/Projects';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import './App.css';
+import Home from './pages/Home';
+import AboutMe from './pages/AboutMe';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import logo from "./assets/logo.png";
 
 /*
-File Name: app.js
+File Name: App.jsx
 Student Name: Ravindra Patil
 Student ID: 300611610
 Date: 2025-09-14
 
 Description: Handles interactive behavior for the portfolio site.
 */
+
 function App() {
   return (
-    <>
+    <Router>
       {/* ======= Navigation Bar ======= */}
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src={logo}
             width="60"
@@ -33,24 +42,24 @@ function App() {
             className="d-inline-block align-top"
             alt="Logo"
           />
-        </a>
+        </Link>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">Home</Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about-me">About Me</a>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about-me">About Me</Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/projects">Projects</a>
+            <li className="nav-item">
+              <Link className="nav-link" to="/projects">Projects</Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/services">Services</a>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services">Services</Link>
             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -64,8 +73,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
