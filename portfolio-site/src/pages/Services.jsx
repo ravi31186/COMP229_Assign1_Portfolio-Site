@@ -1,7 +1,7 @@
 import './Services.css'
-import dev1 from "../../assets/dev1.png";
-import dev2 from "../../assets/dev2.png";
-import dev3 from "../../assets/dev3.png";
+import dev1 from "../assets/dev1.png";
+import dev2 from "../assets/dev2.png";
+import dev3 from "../assets/dev3.png";
 
 /*
 File Name: services.js

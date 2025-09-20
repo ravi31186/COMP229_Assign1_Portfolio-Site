@@ -1,6 +1,6 @@
 import './AboutMe.css'
-import profile from "../../assets/profile.jpg";
-import resume from "../../assets/resume.pdf";
+import profile from "../assets/profile.jpg";
+import resume from "../assets/resume.pdf";
 
 /*
 File Name: aboutMe.js
