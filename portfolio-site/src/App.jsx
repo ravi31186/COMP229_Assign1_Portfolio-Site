@@ -1,11 +1,11 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import React from "react";
 import './App.css'
-import Home from './pages/home/Home';
-import AboutMe from './pages/aboutMe/AboutMe';
-import Services from './pages/services/Services';
-import Contact from './pages/contact/Contact';
-import Projects from './pages/projects/Projects';
+import Home from './pages/Home/Home';
+import AboutMe from './pages/AboutMe/AboutMe';
+import Services from './pages/Services/Services';
+import Contact from './pages/Contact/Contact';
+import Projects from './pages/Projects/Projects';
 import logo from "./assets/logo.png";
 
 /*
