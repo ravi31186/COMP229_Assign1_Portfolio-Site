@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
-import Home from './pages/Home/Home';
-import AboutMe from './pages/AboutMe/AboutMe';
-import Services from './pages/Services/Services';
-import Projects from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
+import Home from './pages/Home';
+import AboutMe from './pages/AboutMe';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import logo from "./assets/logo.png";
 
 /*
