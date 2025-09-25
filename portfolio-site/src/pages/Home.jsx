@@ -1,4 +1,6 @@
 import './Home.css'
+import React, { useEffect, useState } from 'react';
+import { api } from "../lib/api";
 
 /*
 File Name: home.js
@@ -10,24 +12,38 @@ Description: Handles displaying home page for the portfolio site.
 */
 export default function Home() {
 
+  const [home, setHome] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await api("/api/home");
+        setHome(data);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+
+  const links = home?.homelink ?? home?.homelinks ?? [];
+
   return (
     <>
       <div class="home-page-container">
         <h1>Welcome!</h1>
         <p>
-          Hi, I’m <strong>Ravindra</strong>.  
-          I am a passionate developer who loves working on web and mobile applications. 
-          With strong knowledge in React, JavaScript, and backend technologies, I create full-stack solutions for real-world problems.  
-          Take a look around, and don’t hesitate to <a href="/contact">reach out</a>—I’d love to hear from you!
-          <a href="/about-me"> About me</a> Please review about me page to learn more about my self.
-          <a href="/services"> Services</a> My services will provide more details about my skills.
-          <a href="/projects"> Projects</a> My Projects will provide more details about my work.
+          {home.greeting} <strong>{home.name}</strong>.  
+          {home.intro}
+          <span></span>
+          {links.map(({to, item, text}) => (
+            <span key={to}>
+              <a href={to}> {item}</a> {text}
+            </span>
+          ))}
         </p>
 
-        <h2>My Mission</h2>
-        <p class="mb-0">
-          My mission is to build user-friendly, accessible, and impactful digital solutions that help people connect, learn, and grow.
-        </p>
+        <h2>{home.missionName}</h2>
+        <p class="mb-0">{home.missionDetails}</p>
       </div>
     </>
   )
